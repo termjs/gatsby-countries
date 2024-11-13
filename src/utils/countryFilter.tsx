@@ -43,7 +43,7 @@ const CountrySearch = () => {
             imgElement.alt = `${country.name} flag`;
 
             const linkElement = document.createElement("a");
-            linkElement.href = `/gatsby-countries-online/about/${country.name.toLowerCase()}`;
+            linkElement.href = `about/${country.name.toLowerCase()}`;
             linkElement.appendChild(imgElement);
 
             countryElement.insertBefore(linkElement, countryElement.firstChild);
@@ -53,9 +53,6 @@ const CountrySearch = () => {
             }
         });
     };
-
-    // Get all of the countries from the JSON file
-    // Assuming data is imported from a JSON file or an API
 
   // Initialize countries data
   useEffect(() => {
