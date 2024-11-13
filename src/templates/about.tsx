@@ -41,8 +41,7 @@ const AboutPage: React.FC<{ data: { dataJson: CountryData } }> = ({ data }) => {
     <Layout>
       <main>
         <a className="backButton" href="javascript:history.back()">
-          {/* Check if FontAwesomeIcon is loaded, as it may not be available during SSR */}
-          {typeof window !== "undefined" && <FontAwesomeIcon icon={faArrowLeft} />}
+          <FontAwesomeIcon icon={faArrowLeft} />
           Back
         </a>
 
