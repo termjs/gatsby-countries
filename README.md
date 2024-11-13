@@ -38,4 +38,4 @@ Here's a quick overview of the project structure:
 ## Preview
 
 ![Website Mockup Preview](./image.png)
-Check out the live version [here](https://termjs.github.io/gatsby-countries-online/).
+Check out the live version [here](https://termjs.github.io/gatsby-countries/).
