@@ -30,8 +30,8 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
 
   result.data?.allDataJson.edges.forEach(({ node }: { node: { name: string } }) => {
     createPage({
-      path: `/about/${node.name.toLowerCase()}`,
-      component: path.resolve("./src/templates/about.tsx"),
+      path: `/gatsby-countries/about/${node.name.toLowerCase()}`,
+      component: path.resolve("./gatsby-countries/src/templates/about.tsx"),
       context: {
         name: node.name,
       },

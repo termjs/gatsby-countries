@@ -36,7 +36,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
             </>
           ) : null}
           <br />
-          <Link to={__dirname} style={{ color: "#61dafb", textDecoration: "none" }}>Go home</Link>.
+          <Link to="/gatsby-countries" style={{ color: "#61dafb", textDecoration: "none" }}>Go home</Link>.
         </p>
       </main>
     </Layout>

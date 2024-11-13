@@ -14,14 +14,14 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/src/data/`,
+        path: `./gatsby-countries/src/data/`,
       },
     },
     `gatsby-transformer-json`,
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        "icon": "./src/images/icon.png"
+        "icon": "./gatsby-countries/src/images/icon.png"
       }
     },
   ],

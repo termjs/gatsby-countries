@@ -43,7 +43,7 @@ const CountrySearch = () => {
             imgElement.alt = `${country.name} flag`;
 
             const linkElement = document.createElement("a");
-            linkElement.href = `/about/${country.name.toLowerCase()}`;
+            linkElement.href = `gatsby-countries/about/${country.name.toLowerCase()}`;
             linkElement.appendChild(imgElement);
 
             countryElement.insertBefore(linkElement, countryElement.firstChild);
