@@ -70,9 +70,9 @@ const AboutPage: React.FC<{ data: { dataJson: CountryData } }> = ({ data }) => {
               <span>Border Countries: </span>
               {country.borders && country.borders.length > 0 ? (
                 country.borders.map((border: string) => (
-                  <a key={border} href={`/about/${getFullCountryName(border).toLowerCase()}`}>
+                    <a key={border} href={`/gatsby-country-online/about/${getFullCountryName(border).toLowerCase()}`}>
                     {getFullCountryName(border)}
-                  </a>
+                    </a>
                 ))
               ) : (
                 <p>No border countries found</p>

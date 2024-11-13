@@ -4,7 +4,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: `Countries API`,
   },
-  pathPrefix: "/gatsby-countries",
+  pathPrefix: "/gatsby-country-online",
   graphqlTypegen: true,
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -22,6 +22,7 @@ const config: GatsbyConfig = {
         "icon": "src/images/icon.png"
       }
     },
+    `gatsby-plugin-offline`
   ],
 };
 
