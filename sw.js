@@ -27,21 +27,21 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-0efc0e63558ba6389566.js"
+    "url": "webpack-runtime-60a33dd19848e711c848.js"
   },
   {
-    "url": "framework-8ecb8bf464ddee969568.js"
+    "url": "framework-8d90189d863fe0a243b3.js"
   },
   {
-    "url": "app-a7cf19968eb209fc2abb.js"
+    "url": "app-5d72e7ef35c6210338af.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "64bb4d9e123d6d1ec00fa49b6fbbad0b"
+    "revision": "68a179ca6a197b91d417681b2e7eea92"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "f27d4e597c78bb0f111114854ce1d204"
+    "revision": "40de906cc1442acace64ef6bf18620fa"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -146,12 +146,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/gatsby-countries-online`), ``)
+  pathname = pathname.replace(new RegExp(`^/gatsby-countries`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/gatsby-countries-online/app-a7cf19968eb209fc2abb.js`))) {
+  if (!resources || !(await caches.match(`/gatsby-countries/app-5d72e7ef35c6210338af.js`))) {
     return await fetch(event.request)
   }
 
@@ -164,7 +164,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/gatsby-countries-online/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/gatsby-countries/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
