@@ -1,9 +1,8 @@
 {
-  "name": "countries-api",
-  "homepage": "https://termjs.github.io/gatsby-countries-online/",
+  "name": "gatsby-countries",
   "version": "1.0.0",
   "private": true,
-  "description": "countries-api",
+  "description": "A simple county with dummy data from JSON file website, built with Gatsby and TypeScript.",
   "keywords": [
     "gatsby"
   ],
