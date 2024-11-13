@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import data from '../../src/data/data.json';
 
 const CountrySearch = () => {
+    const [countries, setCountries] = useState<{ name: string; flag: string; region: string; population: number; capital: string }[]>([]);
+    
     // Filter the countries based on the search input and region selection
     const filterCountries = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const searchValue = (document.querySelector('input[type="text"]') as HTMLInputElement).value;
@@ -55,18 +57,18 @@ const CountrySearch = () => {
     // Get all of the countries from the JSON file
     // Assuming data is imported from a JSON file or an API
 
-    const countries = data.map((country) => ({
-        name: country.name,
-        flag: country.flags.png,
-        region: country.region,
-        population: country.population, // Add population property
-        capital: country.capital || "N/A" // Add capital property with default value
+  // Initialize countries data
+  useEffect(() => {
+    const initialCountries = data.map((country) => ({
+      name: country.name,
+      flag: country.flags.png,
+      region: country.region,
+      population: country.population,
+      capital: country.capital || "N/A",
     }));
-
-    // Display all of the countries when the component mounts
-    useEffect(() => {
-        displayCountries(countries);
-    }, []);
+    setCountries(initialCountries);
+    displayCountries(initialCountries);
+  }, []);
 
     return (
         <div>
