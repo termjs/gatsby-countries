@@ -1,5 +1,6 @@
 {
   "name": "countries-api",
+  "homepage": "https://termjs.github.io/gatsby-countries/",
   "version": "1.0.0",
   "private": true,
   "description": "countries-api",
