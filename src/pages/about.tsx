@@ -34,6 +34,9 @@ const getFullCountryName = (code: string): string => {
 };
 
 const AboutPage: React.FC<{ data: CountryData }> = ({ data }) => {
+    if (!data || !data.dataJson) {
+        return <h1>Data not found</h1>;
+    }
     const country = data.dataJson;
 
     return (
