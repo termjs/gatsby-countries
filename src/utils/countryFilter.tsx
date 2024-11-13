@@ -43,7 +43,7 @@ const CountrySearch = () => {
             imgElement.alt = `${country.name} flag`;
 
             const linkElement = document.createElement("a");
-            linkElement.href = `${__dirname}/about/${country.name.toLowerCase()}`;
+            linkElement.href = `/about/${country.name.toLowerCase()}`;
             linkElement.appendChild(imgElement);
 
             countryElement.insertBefore(linkElement, countryElement.firstChild);
