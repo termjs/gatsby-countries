@@ -4,7 +4,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: `Countries API`,
   },
-  pathPrefix: "/gatsby-country-online",
+  pathPrefix: "/gatsby-countries-online",
   graphqlTypegen: true,
   plugins: [
     `gatsby-plugin-react-helmet`,
