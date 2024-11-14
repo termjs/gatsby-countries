@@ -1,6 +1,6 @@
 import * as React from "react";
-import { graphql } from "gatsby";
-import Layout from "../components/layout";
+import { graphql, Link, navigate } from "gatsby";
+import Layout from "../components/layouts/layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import countryData from "../../src/data/data.json";
@@ -40,10 +40,11 @@ const AboutPage: React.FC<{ data: { dataJson: CountryData } }> = ({ data }) => {
   return (
     <Layout>
       <main>
-        <a className="backButton" href="javascript:history.back()">
+
+        <button onClick={() => navigate(-1)} className="backButton">
           <FontAwesomeIcon icon={faArrowLeft} />
           Back
-        </a>
+        </button>
 
         <div className="country-about">
           <img src={country.flags.png} alt={`${country.name} flag`} />
@@ -70,9 +71,9 @@ const AboutPage: React.FC<{ data: { dataJson: CountryData } }> = ({ data }) => {
               <span>Border Countries: </span>
               {country.borders && country.borders.length > 0 ? (
                 country.borders.map((border: string) => (
-                    <a key={border} href={`/gatsby-countries-online/about/${getFullCountryName(border).toLowerCase()}`}>
+                  <Link key={border} to={`/about/${getFullCountryName(border).toLowerCase()}`}>
                     {getFullCountryName(border)}
-                    </a>
+                  </Link>
                 ))
               ) : (
                 <p>No border countries found</p>

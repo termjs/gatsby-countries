@@ -1,12 +1,12 @@
 import * as React from "react";
-import Layout from "../components/layout";
-import CountrySearch from "../utils/countryFilter";
+import Layout from "../components/layouts/layout";
+import CountryDisplay from "../utils/countryDisplay";
 
 const IndexPage = () => {
   return (
     <Layout>
       <main>
-        <CountrySearch />
+        <CountryDisplay />
       </main>
     </Layout>
   );

@@ -4,11 +4,7 @@
         margin: 0 1rem;
     }
 
-    .search-container {
-        width: 100%;
-        padding: 10px;
-    }
-
+    .search-container,
     .filter-container input {
         width: 100%;
     }
@@ -51,8 +47,20 @@
         margin: 2rem;
     }
 
-    .country-list img {
-        height: 12rem;
+    .country-data-container span {
+        flex-direction: column;
+    }
+
+    .country-align h1 {
+        font-size: calc(2rem + 0.5vw);
+    }
+
+    .country-data-container span p {
+        font-size: calc(1rem + 0.5vw);
+    }
+
+    .borderTags a {
+        font-size: calc(1rem + 0.5vw);
     }
 }
 
@@ -62,6 +70,10 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 2rem;
+    }
+
+    .filter-container input {
+        width: 100%;
     }
 
     .country-about {

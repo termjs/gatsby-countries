@@ -1,29 +1,11 @@
 import * as React from "react"
 import { Link, HeadFC, PageProps } from "gatsby"
-import Layout from "../components/layout";
-
-const mainStyles: React.CSSProperties = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  height: "80vh",
-  color: "white",
-  textAlign: "center",
-}
-
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import Layout from "../components/layouts/layout";
 
 const NotFoundPage: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <main style={mainStyles}>
+      <main className="mainFrame">
         <h1>Page not found</h1>
         <p>
           Sorry 😔, we couldn’t find what you were looking for.
@@ -31,12 +13,12 @@ const NotFoundPage: React.FC<PageProps> = () => {
           {process.env.NODE_ENV === "development" ? (
             <>
               <br />
-              Try creating a page in <code style={codeStyles}>src/pages/</code>.
+              Try creating a page in <code className="codeTag">src/pages/</code>.
               <br />
             </>
           ) : null}
           <br />
-          <Link to="/" style={{ color: "#61dafb", textDecoration: "none" }}>Go home</Link>.
+          <Link to="/" className="linkStyle">Go home</Link>.
         </p>
       </main>
     </Layout>
