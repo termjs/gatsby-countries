@@ -1,15 +1,9 @@
 {
   "name": "gatsby-countries",
-  "homepage": "https://termjs.github.io/gatsby-countries/",
-  "version": "1.0.0",
-  "private": true,
-  "description": "gatsby-countries",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
+"homepage": "https://termjs.github.io/gatsby-countries/",
+"version": "1.0.0",
+"private": true,
+"description": "A simple county with dummy data from JSON file website, built with Gatsby and TypeScript.",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
